@@ -502,6 +502,41 @@ genuine zeros.
 ### What I would do
 
 - log Transformation can be used.
+______________________________________________________________________________________
+__________________________________________________________________________________________
+# R7 - Findings
+
+### Missingness Analysis
+
+we used a missingno matrix to visualize missing values in the dataset. The
+visualization showed that some columns, especially `belongs_to_collection`,
+contain many missing values.To check whether missing values are related to
+another variable, I compared the revenue of movies where `belongs_to_collection`
+is missing and where it is present. This helps to see if the missing values are
+random or if they show some pattern. The comparison suggested that missingness
+may be related to movie revenue.
+
+### Feature Engineering
+
+I created a new feature called `revenue_per_vote` using the following formula:
+
+Revenue Per Vote = Revenue / (Vote Count + 1)
+
+This feature may help because it shows how much revenue is generated relative to
+ audience engagement. It combines information from two existing columns into one
+  useful metric.
+
+### Pearson vs Spearman Correlation
+
+I compared the relationship between Runtime and Revenue using both Pearson and
+Spearman correlation.
+
+Pearson correlation measures linear relationship between variables, while
+Spearman correlation measures rank-based relationship.
+
+The values were different, which suggests that the relationship between Runtime
+and Revenue is not perfectly linear. There may be some pattern in the data, but
+it is not completely captured by a straight-line relationship.
 
 
 
