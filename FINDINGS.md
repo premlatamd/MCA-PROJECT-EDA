@@ -401,7 +401,7 @@ If we do not change the type of column then model might throw error while using
 these values for computing other result.
 
 ### What I would do
-budget and id column should be numerical type, before giving the dataset to the 
+- budget and id column should be numerical type, before giving the dataset to the 
 model we have to modify the datatype of the columns such that we can conclude 
 mean,median,mode or another mathematical operation further.
 ---
@@ -466,7 +466,7 @@ representation of most movies.
 We can use here a log transformation to reduce the extrme effect of high rated
 movies and that make the distribution more balanced.
 
-Instead of this,we also can use IQR method Which is not known to me .
+- Instead of this,we also can use IQR method Which is not known to me .
 ---
 
 ## Finding 8: Adult and Status Columns Are Highly Imbalanced
